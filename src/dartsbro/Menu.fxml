@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dartsbro.MenuController">
+   <children>
+      <ImageView id="player_pic" fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/dartsbro_player.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="199.0" fitWidth="264.0" layoutX="271.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" styleClass="dartsbro_sign">
+         <image>
+            <Image url="@img/dartsbro_sign.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="65.0" layoutY="270.0" prefHeight="24.0" prefWidth="470.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#game_setup_button_pushed" prefHeight="37.0" prefWidth="200.0" text="Start Game" />
+            <Button mnemonicParsing="false" onAction="#rules_button_pushed" prefHeight="37.0" prefWidth="200.0" text="Rules" />
+            <Button mnemonicParsing="false" onAction="#exit_button_pushed" prefHeight="37.0" prefWidth="200.0" text="Exit" />
+         </children>
+      </HBox>
+      
+   </children>
+</AnchorPane>

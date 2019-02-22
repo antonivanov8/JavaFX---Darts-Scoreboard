@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dartsbro.GameSetupController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="333.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true" styleClass="dartsbro_sign">
+         <image>
+            <Image url="@img/dartsbro_sign.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="35.0" layoutY="28.0" prefHeight="308.0" prefWidth="260.0" spacing="10.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="310.0" prefWidth="0.0">
+              <columns>
+                <TableColumn fx:id="nicknameColumn" prefWidth="260.0" text="Players:" />
+              </columns>
+            </TableView>
+            <TextField fx:id="nicknameTextField" promptText="Nickname" />
+         </children>
+      </VBox>
+      <Label fx:id="no_players_created_label" layoutX="441.0" layoutY="372.0" text="No players created" textFill="WHITE" />
+      <HBox layoutX="35.0" layoutY="346.0" prefHeight="26.0" prefWidth="530.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#add_player_button_pushed" prefWidth="125.0" text="Add New Player" />
+            <Button mnemonicParsing="false" onAction="#remove_players_button_pushed" prefHeight="25.0" prefWidth="125.0" text="Remove" />
+            <Button mnemonicParsing="false" onAction="#game_back_pushed" prefWidth="125.0" text="Back" />
+            <Button mnemonicParsing="false" onAction="#start_game_button_pushed" prefWidth="125.0" text="Start Game" />
+         </children>
+      </HBox>
+      <HBox layoutX="305.0" layoutY="311.0" prefHeight="25.0" prefWidth="125.0" spacing="11.0">
+         <children>
+            <Button fx:id="game_back_yes" mnemonicParsing="false" onAction="#game_back_yes_pushed" prefWidth="57.0" text="Yes" />
+            <Button fx:id="game_back_no" mnemonicParsing="false" onAction="#game_back_no_pushed" prefWidth="57.0" text="No" />
+         </children></HBox>
+      <Label alignment="CENTER" layoutX="305.0" layoutY="28.0" prefWidth="125.0" text="Game Type:" textFill="#f8f5f2">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox" layoutX="440.0" layoutY="28.0" prefHeight="25.0" prefWidth="125.0" />
+      <Label fx:id="no_nickname_label" layoutX="36.0" layoutY="372.0" text="Add nickname to create a player" textFill="WHITE" />
+      <Label fx:id="game_back_label" layoutX="306.0" layoutY="287.0" prefHeight="17.0" prefWidth="125.0" text="Are you shure ?" />
+   </children>
+</AnchorPane>

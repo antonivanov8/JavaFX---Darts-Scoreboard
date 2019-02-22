@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dartsbro.GameController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="324.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" styleClass="dartsbro_sign">
+         <image>
+            <Image url="@img/dartsbro_sign.png" />
+         </image>
+      </ImageView>
+      <GridPane alignment="CENTER_LEFT" hgap="10.0" layoutX="290.0" layoutY="143.0" prefHeight="139.0" prefWidth="264.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#seven_button_pushed" prefWidth="85.0" text="7" />
+            <Button mnemonicParsing="false" onAction="#four_button_pushed" prefWidth="85.0" text="4" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#one_button_pushed" prefWidth="85.0" text="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#eight_button_pushed" prefWidth="85.0" text="8" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#nine_button_pushed" prefWidth="85.0" text="9" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#five_button_pushed" prefWidth="85.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#six_button_pushed" prefWidth="85.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#two_button_pushed" prefWidth="85.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#tree_button_pushed" prefWidth="85.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#zero_button_pushed" prefHeight="25.0" prefWidth="85.0" text="0" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#enter_sum_button_pushed" prefWidth="85.0" text="Enter" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="sum" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="gameTableView" layoutX="42.0" layoutY="79.0" prefHeight="200.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="nicknameColumn" prefWidth="165.0" text="Players:" />
+            <TableColumn fx:id="pointsColumn" prefWidth="60.0" text="Points:" />
+        </columns>
+      </TableView>
+      <HBox layoutX="93.0" layoutY="287.0" prefHeight="25.0" prefWidth="460.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#game_back_pushed" text="Back" />
+            <Label fx:id="game_back_label" text="All the changes will disapear. Are you shure ?" />
+            <Button fx:id="game_back_no" mnemonicParsing="false" onAction="#game_back_no_pushed" text="No" />
+            <Button fx:id="game_back_yes" mnemonicParsing="false" onAction="#game_back_yes_pushed" text="Yes" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

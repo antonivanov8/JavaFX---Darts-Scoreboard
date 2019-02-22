@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dartsbro.PlayersController">
+   <children>
+      <TableView fx:id="tableView" layoutX="266.0" layoutY="100.0" prefHeight="200.0" prefWidth="321.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" resizable="false" text="Name" />
+          <TableColumn fx:id="surnameColumn" resizable="false" text="Surname" />
+            <TableColumn fx:id="nicknameColumn" resizable="false" text="Nickname" />
+            <TableColumn fx:id="birthdayColumn" resizable="false" text="Birthday" />
+        </columns>
+      </TableView>
+      <VBox layoutX="10.0" layoutY="112.0" prefHeight="123.0" prefWidth="227.0" spacing="13.0">
+         <children>
+            <TextField fx:id="nameTextField" promptText="Name" />
+            <TextField fx:id="surnameTextField" promptText="Surname" />
+            <TextField fx:id="nicknameTextField" promptText="Nickname" />
+            <DatePicker fx:id="birthdayDatePicker" promptText="Date of birth" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addPlayer_button_pushed" prefHeight="24.0" prefWidth="174.0" text="Add New Player">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="266.0" layoutY="309.0" mnemonicParsing="false" onAction="#removePlayers_button_pushed" prefHeight="25.0" prefWidth="193.0" text="Remove Player" />
+   </children>
+</AnchorPane>
